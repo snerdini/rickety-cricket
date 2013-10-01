@@ -10,4 +10,4 @@
 
 <script src="/bower_components/jquery/jquery.min.js"></script>
 <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<script src="/scripts/modernizr.min.js"></script>
+<script src="/bower_components/modernizr/modernizr.js"></script>

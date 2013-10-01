@@ -63,9 +63,12 @@ N4mHtmlGenerator.prototype.app = function app() {
 
   this.mkdir('webparts');
 
+  this.copy('webparts/head.php', 'webparts/head.php');
   this.write('webparts/header.php', '');
   this.write('webparts/nav-top.php', '');
   this.write('webparts/footer.php', '');
+
+  this.copy('index.php', 'index.php');
 };
 
 N4mHtmlGenerator.prototype.projectfiles = function projectfiles() {
