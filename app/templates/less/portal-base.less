@@ -1,0 +1,189 @@
+@import "../bootstrap/variables.less";
+@import "../bootstrap/mixins.less";
+
+@headerColor: #FFFF00;
+@darkBlue: #000033;
+@topNavHeight: 30px;
+
+//@import "/Styles/mega-menus.less";
+
+.h1Formatter {
+    h1 {
+        line-height: normal;
+        margin: 0;
+        font-weight: normal;
+    }
+}
+
+body#htmlBody {
+    @media(max-width: 767px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+[class^="icon-"], [class*=" icon-"] {
+    background-image: url("../../../Content/images/glyphicons-halflings.png");
+}
+
+.icon-white, .nav-tabs > .active > a > [class^="icon-"], .nav-tabs > .active > a > [class*=" icon-"], .nav-pills > .active > a > [class^="icon-"], .nav-pills > .active > a > [class*=" icon-"], .nav-list > .active > a > [class^="icon-"], .nav-list > .active > a > [class*=" icon-"], .navbar-inverse .nav > .active > a > [class^="icon-"], .navbar-inverse .nav > .active > a > [class*=" icon-"], .dropdown-menu > li > a:hover > [class^="icon-"], .dropdown-menu > li > a:hover > [class*=" icon-"], .dropdown-menu > .active > a > [class^="icon-"], .dropdown-menu > .active > a > [class*=" icon-"] {
+  background-image: url("../../../Content/images/glyphicons-halflings-white.png");
+}
+
+.icon-gray, .nav-tabs > .active > a > [class^="icon-"], .nav-tabs > .active > a > [class*=" icon-"], .nav-pills > .active > a > [class^="icon-"], .nav-pills > .active > a > [class*=" icon-"], .nav-list > .active > a > [class^="icon-"], .nav-list > .active > a > [class*=" icon-"], .navbar-inverse .nav > .active > a > [class^="icon-"], .navbar-inverse .nav > .active > a > [class*=" icon-"], .dropdown-menu > li > a:hover > [class^="icon-"], .dropdown-menu > li > a:hover > [class*=" icon-"], .dropdown-menu > .active > a > [class^="icon-"], .dropdown-menu > .active > a > [class*=" icon-"] {
+  background-image: url("../../../Content/images/glyphicons-halflings-gray.png");
+}
+
+div#PortalManager.infoPanel {
+    margin: 0 -6px;
+    width: auto;
+    border-radius: 6px;
+    .box-shadow(0 3px 3px #000000);
+
+    label {
+        display: inline;
+        vertical-align: middle;
+        line-height: normal;
+    }
+
+    input[type="checkbox"] {
+        margin: 0 4px 0 0;
+        vertical-align: middle;
+    }
+
+    table {
+        margin-top: 6px;
+
+        th {
+            padding: 0 6px 0 2px;
+        }
+
+        td {
+            padding: 4px 0 0 4px;
+        }
+    }
+}
+    }
+
+.row-fluid [class*='span'] {
+    *behavior: url(/scripts/boxsizing.htc);
+}
+
+#topNav {
+    min-height: @topNavHeight;
+
+    @media (max-width: 980px) {
+        min-height: 0;
+    }
+
+  ul {
+    &.topNav {
+      background: #FFF;
+
+      margin: 0;
+      padding: 0;
+      position: relative;
+      width: 100%;
+      z-index: 100;
+
+      @media (min-width: 980px) {
+        overflow: visible !important;
+        height: auto !important;
+      }
+
+      a {
+        display: block;
+        margin: 0;
+        padding: 0px 20px 0px 20px;
+        line-height: 30px;
+      }
+
+      & > li {
+          float: left;
+          position: relative;
+          z-index: 100;
+          margin-right: 0px;
+          *min-height: @topNavHeight;
+
+          @media (max-width: 979px) {
+            float: none;
+            display: block;
+          }
+
+          & > ul {
+            @media (max-width: 979px) {
+            display: none !important;
+          }
+        }
+      }
+
+      ul {
+          display: none;
+          left: 0;
+          position: absolute;
+          text-align: left;
+          z-index: 110;
+      }
+    }
+
+    margin: 0;
+  }
+}
+
+.threeColumnWrapper {
+    div.contentZone {
+        width: auto;
+    }
+}
+
+.twoColumnRightWrapper {
+    background: none;
+
+    div.contentZone {
+        width: auto;
+    }
+}
+
+div.ui-dialog {
+  div.modal {
+    font-size: 12px;
+    position: static;
+    top: auto;
+    left: auto;
+    margin: 0;
+
+    .pager { margin: 0; }
+
+    input { font-size: 12px; }
+
+    select {
+      height: auto;
+      line-height: normal;
+      padding: 0;
+      width: auto;
+    }
+  }
+}
+
+div.toolsPanel {
+    margin-top: 0;
+
+    ul {
+        margin: 0;
+
+        li {
+            list-style: none;
+        }
+    }
+
+    .h1Formatter;
+}
+
+ol.toolsPanel {
+    .h1Formatter;
+}
+
+.webPart-EditorZoneParts {
+    label {
+        display: inline;
+    }
+}
