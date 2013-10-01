@@ -2,7 +2,7 @@
 <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
 <link href="/favicon.ico" rel="icon" type="image/x-icon">
 <title>
-    Website Title
+    <%- siteName %>
 </title>
 
 <link href="/styles/main.css" rel="stylesheet" type="text/css" />

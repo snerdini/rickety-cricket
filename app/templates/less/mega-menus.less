@@ -1,96 +1,91 @@
 
 div.mega-menu {
     &.navbar {
-        .navbar-inner {
-            padding-left: 0;
-            padding-right: 0;
+        div.navbar-collapse {
+            overflow: visible;
 
-            div.nav-collapse {
-                overflow: visible;
+            ul.nav {
+                float: none;
+                right: 0;
 
-                ul.nav {
-                    float: none;
-                    right: 0;
+                & > li {
+                    position: static;
 
-                    & > li {
-                        position: static;
+                    div.dropdown-menu {
+                        min-height: 150px;
 
-                        div.dropdown-menu {
-                            min-height: 150px;
+                        .mega-pane { padding-bottom: 10px; }
+                        .left-pane { float: left; }
+                        .right-pane { float: right; }
 
-                            .mega-pane { padding-bottom: 10px; }
-                            .left-pane { float: left; }
-                            .right-pane { float: right; }
+                        .left {
+                            .left-pane;
+                            .mega-pane;
+                            padding-left: 10px;
+                        }
 
-                            .left {
-                                .left-pane;
-                                .mega-pane;
-                                padding-left: 10px;
-                            }
+                        .right {
+                            .right-pane;
+                            .mega-pane;
+                            padding-right: 10px;
+                        }
 
-                            .right {
-                                .right-pane;
-                                .mega-pane;
-                                padding-right: 10px;
-                            }
+                        right: 0;
+                        top: 50px;
+                        border-radius: 0;
 
-                            right: 0;
-                            top: 40px;
-                            border-radius: 0;
+                        &:before, &:after {
+                            display: none;
+                        }
 
-                            &:before, &:after {
-                                display: none;
-                            }
+                        div.nav-links {
+                            float: left;
+                            width: 66%;
+                            -moz-box-sizing: border-box;
+                            box-sizing: border-box;
 
-                            div.nav-links {
-                                float: left;
-                                width: 66%;
-                                -moz-box-sizing: border-box;
-                                box-sizing: border-box;
+                            & > ul > li {
+                                vertical-align: top;
+                                display: inline-block;
+                                *display: inline;
+                                zoom: 1;
+                                width: 49%;
 
-                                & > ul > li {
-                                    vertical-align: top;
-                                    display: inline-block;
-                                    *display: inline;
-                                    zoom: 1;
-                                    width: 49%;
-
-                                    span {
-                                        display: block;
-                                        margin: 3px 20px;
-                                    }
+                                span {
+                                    display: block;
+                                    margin: 3px 20px;
                                 }
-
-                                &.no-content > ul > li {
-                                    width: 32%;
-                                }
-
-                                &.left { .left-pane; }
-                                &.right { .right-pane; }
-                                &.no-content { width: 100%; }
                             }
 
-                            div.mega-content {
-                                width: 33%;
+                            &.no-content > ul > li {
+                                width: 32%;
+                            }
+
+                            &.left { .left-pane; }
+                            &.right { .right-pane; }
+                            &.no-content { width: 100%; }
+                        }
+
+                        div.mega-content {
+                            width: 33%;
+                            float: right;
+                            -moz-box-sizing: border-box;
+                            box-sizing: border-box;
+
+                            img {
                                 float: right;
-                                -moz-box-sizing: border-box;
-                                box-sizing: border-box;
-
-                                img {
-                                    float: right;
-                                    margin-right: 5px;
-                                }
-
-                                &.left {
-                                    .left-pane;
-                                    img { .left-pane; }
-                                }
-                                &.right {
-                                    .right-pane;
-                                    img { .right-pane; }
-                                }
-                                &.no-links { width: 100%; }
+                                margin-right: 5px;
                             }
+
+                            &.left {
+                                .left-pane;
+                                img { .left-pane; }
+                            }
+                            &.right {
+                                .right-pane;
+                                img { .right-pane; }
+                            }
+                            &.no-links { width: 100%; }
                         }
                     }
                 }

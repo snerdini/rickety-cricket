@@ -23,14 +23,13 @@ N4mHtmlGenerator.prototype.askFor = function askFor() {
   console.log(this.yeoman);
 
   var prompts = [{
-    type: 'confirm',
-    name: 'someOption',
-    message: 'Would you like to enable this option?',
-    default: true
+    name: 'siteName',
+    message: 'What would you like to use for your website title?',
+    default: 'My New Website'
   }];
 
   this.prompt(prompts, function (props) {
-    this.someOption = props.someOption;
+    this.siteName = props.siteName;
 
     cb();
   }.bind(this));
@@ -63,9 +62,9 @@ N4mHtmlGenerator.prototype.app = function app() {
 
   this.mkdir('webparts');
 
-  this.copy('webparts/head.php', 'webparts/head.php');
+  this.template('webparts/head.php', 'webparts/head.php', { siteName: this.siteName });
   this.write('webparts/header.php', '');
-  this.write('webparts/nav-top.php', '');
+  this.copy('webparts/nav-top.php', 'webparts/nav-top.php');
   this.write('webparts/footer.php', '');
 
   this.copy('index.php', 'index.php');
