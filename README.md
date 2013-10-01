@@ -1,4 +1,4 @@
-# generator-n4m-html [![Build Status](https://secure.travis-ci.org/snerdini/generator-n4m-html.png?branch=master)](https://travis-ci.org/snerdini/generator-n4m-html)
+# generator-n4m-html
 
 A generator for [Yeoman](http://yeoman.io).
 
